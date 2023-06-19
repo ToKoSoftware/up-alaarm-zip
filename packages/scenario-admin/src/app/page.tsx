@@ -23,7 +23,7 @@ export default function Home() {
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="default">
-                        Szenario Starten
+                        Szenario starten
                     </Button>
                 </SheetTrigger>
                 <SheetContent position="right" size="sm">
@@ -55,7 +55,9 @@ export default function Home() {
                     </div>
                     <SheetFooter>
                         <SheetClose asChild>
-                            <Button type="submit">Save changes</Button>
+                            <Button type="submit">
+                                Szenario starten
+                            </Button>
                         </SheetClose>
                     </SheetFooter>
                 </SheetContent>
