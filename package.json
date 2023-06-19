@@ -6,11 +6,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "scenario-admin:start": "cd scenario-admin && npm start",
-    "scenario-admin:dev": "cd scenario-admin && npm run dev",
-    "scenario-client:start": "cd scenario-client && npm start",
-    "scenario-client:dev": "cd scenario-client && npm run dev",
-    "scenario-controller:start": "cd scenario-controller && npm start",
+    "scenario-admin:start": "cd packages/scenario-admin && npm start",
+    "scenario-admin:dev": "cd packages/scenario-admin && npm run dev",
+    "scenario-client:start": "cd packages/scenario-client && npm start",
+    "scenario-client:dev": "cd packages/scenario-client && npm run dev",
+    "scenario-controller:start": "cd packages/scenario-controller && npm start"
   },
   "repository": {
     "type": "git",
