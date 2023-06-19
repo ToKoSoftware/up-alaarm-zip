@@ -1,0 +1,25 @@
+{
+  "name": "@alaarm/alaarm",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "scenario-admin:start": "cd scenario-admin && npm start",
+    "scenario-admin:dev": "cd scenario-admin && npm run dev",
+    "scenario-client:start": "cd scenario-client && npm start",
+    "scenario-client:dev": "cd scenario-client && npm run dev",
+    "scenario-controller:start": "cd scenario-controller && npm start",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToKoSoftware/up-alaarm-zip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ToKoSoftware/up-alaarm-zip/issues"
+  },
+  "homepage": "https://github.com/ToKoSoftware/up-alaarm-zip#readme"
+}
