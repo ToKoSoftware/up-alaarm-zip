@@ -18,8 +18,11 @@ ID auf BPMN Diagramm: `9`
 
 ```json
 {
-  "eventType": "subwoofer/start",
-  "timestamp": 1526388471
+  "eventType": "devices/subwoofer/start",
+  "timestamp": 1526388471,
+  "payload": {
+    "soundId": "sound-id"
+  }
 }
 ```
 
@@ -28,7 +31,7 @@ ID auf BPMN Diagramm: `10`
 
 ```json
 {
-  "eventType": "speaker/start",
+  "eventType": "devices/speaker/start",
   "timestamp": 1526388471,
   "payload": {
     "soundId": "sound-id"
@@ -41,7 +44,7 @@ ID auf BPMN Diagramm: `11`
 
 ```json
 {
-    "eventType": "vaporizer/start",
+    "eventType": "devices/vaporizer/start",
     "timestamp": 1526388471,
     "payload": {
         "intensity": "light"
@@ -54,7 +57,7 @@ ID auf BPMN Diagramm: `12`
 
 ```json
 {
-    "eventType": "led-strip/start",
+    "eventType": "devices/led-strip/start",
     "timestamp": 1526388471,
     "payload": {
       "color": "blue",

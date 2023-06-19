@@ -11,7 +11,7 @@ ID auf BPMN Diagramm: `6`
 
 ```json
 {
-  "eventType": "conveyor/stop",
+  "eventType": "devices/conveyor/stop",
   "timestamp": 1526388471
 }
 ```
@@ -21,8 +21,11 @@ ID auf BPMN Diagramm: `3`
 
 ```json
 {
-  "eventType": "subwoofer/start",
-  "timestamp": 1526388471
+  "eventType": "devices/subwoofer/start",
+  "timestamp": 1526388471,
+  "payload": {
+    "soundId": "sound-id"
+  }
 }
 ```
 
@@ -31,7 +34,7 @@ ID auf BPMN Diagramm: `4`
 
 ```json
 {
-  "eventType": "speaker/start",
+  "eventType": "devices/speaker/start",
   "timestamp": 1526388471,
   "payload": {
     "soundId": "sound-id"
@@ -46,7 +49,7 @@ ID auf BPMN Diagramm: `4`
 ID auf BPMN Diagramm: `5`
 ```json
 {
-    "eventType": "andon/machine-id/start",
+    "eventType": "devices/andon/start",
     "timestamp": 1526388471,
     "payload": {
         "machineId": "machine-id"

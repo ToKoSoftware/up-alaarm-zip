@@ -11,7 +11,7 @@
 
 ```json
 {
-  "eventType": "conveyor/start",
+  "eventType": "devices/conveyor/start",
   "timestamp": 1526388471
 }
 ```

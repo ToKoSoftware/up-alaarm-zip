@@ -3,7 +3,8 @@
 ```json
 {
   "general": {
-    "timeBeforeScenarioStarts": 120
+    "timeBeforeScenarioStarts": 120,
+    "attendingPersons": 2
   },
   "escalation1": {
     "soundForSubwoofer": "sound-id",

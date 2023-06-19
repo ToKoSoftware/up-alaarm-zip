@@ -10,7 +10,7 @@
 
 ```json
 {
-  "eventType": "subwoofer/stop",
+  "eventType": "device/subwoofer/stop",
   "timestamp": 1526388471
 }
 ```
@@ -19,7 +19,7 @@
 
 ```json
 {
-  "eventType": "speaker/stop",
+  "eventType": "device/speaker/stop",
   "timestamp": 1526388471
 }
 ```
@@ -28,7 +28,7 @@
 
 ```json
 {
-    "eventType": "vaporizer/stop",
+    "eventType": "device/vaporizer/stop",
     "timestamp": 1526388471
 }
 ```
@@ -37,7 +37,7 @@
 
 ```json
 {
-    "eventType": "led-strip/stop",
+    "eventType": "device/led-strip/stop",
     "timestamp": 1526388471
 }
 ```
@@ -46,7 +46,7 @@
 
 ```json
 {
-    "eventType": "heat-lamp/stop",
+    "eventType": "device/heat-lamp/stop",
     "timestamp": 1526388471
 }
 ```
