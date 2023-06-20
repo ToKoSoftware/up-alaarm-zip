@@ -10,8 +10,8 @@
     "start": "npm run build:frontend && ../../node_modules/.bin/ts-node src/index.ts",
     "dev": "../../node_modules/.bin/nodemon -x ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ext .ts src",
-    "lint:fix": "eslint --ext .ts src --fix"
+    "lint": "eslint . src",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
