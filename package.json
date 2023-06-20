@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/ToKoSoftware/up-alaarm-zip#readme",
   "devDependencies": {
-    "husky": "^8.0.3"
-  }
+    "husky": "^8.0.3",
+    "lerna": "^7.0.2"
+  },
+  "dependencies": {}
 }
