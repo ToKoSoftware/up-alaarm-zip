@@ -1,7 +1,7 @@
-"use client"
-import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert"
-import * as React from "react"
-import {Button} from "@/components/ui/button"
+'use client';
+import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
+import * as React from 'react';
+import {Button} from '@/components/ui/button';
 
 export default function Home() {
     return (
@@ -22,5 +22,5 @@ export default function Home() {
             </div>
         </div>
 
-    )
+    );
 }
