@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "lerna run build",
-    "postinstall": "cd packages/scenario-controller && npm install && cd ../scenario-client && npm install && cd ../scenario-admin && npm install && cd ../scenario-shared && npm install",
+    "dev": "lerna run dev",
     "prepare": "husky install"
   },
   "repository": {
@@ -24,5 +24,8 @@
     "husky": "^8.0.3",
     "lerna": "^7.0.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "workspaces": [
+    "packages/*"
+  ]
 }

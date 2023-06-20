@@ -7,8 +7,8 @@
     "doc": "../../docs"
   },
   "scripts": {
-    "start": "npm run build:frontend && ../../node_modules/.bin/ts-node src/index.ts",
-    "dev": "../../node_modules/.bin/nodemon -x ts-node src/index.ts",
+    "start": "npm run build:frontend && ts-node src/index.ts",
+    "dev": "nodemon -x ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/ToKoSoftware/up-alaarm-zip#readme",
   "dependencies": {
-    "@alaarm/shared": "file:../scenario-shared",
+    "@alaarm/shared": "*",
     "is-blank": "^2.1.0",
     "mqtt": "^4.3.7",
     "nodemon": "^2.0.22",
