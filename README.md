@@ -22,15 +22,28 @@ This project is a monorepo. It contains the following packages:
   - Contains shared code and typescript typings between the packages 
 
 ## Installation 
+This project uses [lerna](https://lerna.js.org/) to manage the monorepo.
+[Husky](https://typicode.github.io/husky/#/) is used to run linting before commits.
 
 Run the following command to install all dependencies of all packages:
 ```bash
 npm i
 ```
 
+## Building the project
+
+```bash
+npm run build
+```
+
 ## Running the project
 
+This command will start the admin, client, and controller in parallel in development mode.
+```bash
+npm run dev
+```
 
-## Development
-This project uses [lerna](https://lerna.js.org/) to manage the monorepo.
-[Husky](https://typicode.github.io/husky/#/) is used to run linting before commits.
+To run just one of the packages, use the following command:
+```bash
+npx lerna run dev --scope=@alaarm/scenario-admin
+```
