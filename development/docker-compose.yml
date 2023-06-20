@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  alarmvernemq:
+    image: vernemq/vernemq
+    environment:
+      DOCKER_VERNEMQ_ACCEPT_EULA: "yes"
+      #vmq_diversity.auth_postgres.enabled = on
+      #vmq_diversity.postgres.host = 127.0.0.1
+      #vmq_diversity.postgres.port = 5432
+      #vmq_diversity.postgres.user = vernemq
+      #vmq_diversity.postgres.password = vernemq
+      #vmq_diversity.postgres.database = vernemq_db
+      #vmq_diversity.postgres.password_hash_method = bcrypt
+      DOCKER_VERNEMQ_ALLOW_ANONYMOUS: "on"
+      SERVICE_NAME: "alaarm-vernemq"
+    volumes:
+      - alaarm-vernemq-data:/vernemq
+    networks:
+      - alaarm
+    ports:
+      - "1883:1883"
+      - "8888:8888"
+networks:
+  alaarm:
+volumes:
+  alaarm-vernemq-data:
