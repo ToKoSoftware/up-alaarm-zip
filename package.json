@@ -6,13 +6,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "scenario-admin:start": "cd packages/scenario-admin && npm start",
-    "scenario-admin:dev": "cd packages/scenario-admin && npm run dev",
-    "scenario-client:start": "cd packages/scenario-client && npm start",
-    "scenario-client:dev": "cd packages/scenario-client && npm run dev",
-    "scenario-controller:start": "cd packages/scenario-controller && npm start",
-    "alaarm:lint": "cd packages/scenario-controller && npm run lint && cd ../scenario-client && npm npm run lint && cd ../scenario-admin && npm run lint && cd ../scenario-shared && npm run lint",
-    "alaarm:lint:fix": "cd packages/scenario-controller && npm run lint:fix && cd ../scenario-client && npm run lint:fix && cd ../scenario-admin && npm run lint:fix && cd ../scenario-shared && npm run lint:fix",
+    "build": "lerna run build",
     "postinstall": "cd packages/scenario-controller && npm install && cd ../scenario-client && npm install && cd ../scenario-admin && npm install && cd ../scenario-shared && npm install",
     "prepare": "husky install"
   },

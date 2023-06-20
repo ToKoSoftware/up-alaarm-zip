@@ -12,8 +12,10 @@ TBD
 This project is a monorepo. It contains the following packages:
 - [scenario-admin](./packages/scenario-admin/README.md)
   - Contains the code for the admin which is responsible for the creation and management of scenarios
+  - The admin has been deployed to [https://admin.alaarm.cloud/](https://admin.alaarm.cloud)
 - [scenario-client](./packages/scenario-client/README.md)
   - Contains the code for the client which is handles the scenario's attendee's inputs 
+  - The client has been deployed to [https://client.alaarm.cloud/](https://client.alaarm.cloud)
 - [scenario-controller](./packages/scenario-controller/README.md)
   - Contains the code for the main controller which is responsible for the communication between the admin, client, and the local mqtt cloud 
 - [scenario-shared](./packages/scenario-shared/README.md)
@@ -28,5 +30,7 @@ npm i
 
 ## Running the project
 
+
 ## Development
 This project uses [lerna](https://lerna.js.org/) to manage the monorepo.
+[Husky](https://typicode.github.io/husky/#/) is used to run linting before commits.
