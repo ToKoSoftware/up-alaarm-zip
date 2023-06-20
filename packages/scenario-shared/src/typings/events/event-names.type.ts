@@ -2,6 +2,7 @@ export type devicePrefix = 'devices';
 export type generalPrefix = 'general';
 
 export type EventNamesWithoutPayload =
+    // stop
     // generic
     `${generalPrefix}/start` |
     // escalation starts
@@ -12,7 +13,10 @@ export type EventNamesWithoutPayload =
     `${generalPrefix}/escalation1/quest/start` |
     `${generalPrefix}/escalation2/quest/start` |
     `${generalPrefix}/escalation3/quest/start` |
+    // devices
+    `${devicePrefix}/conveyor/start` |
 
+    // stop
     // generic
     `${generalPrefix}/stop` |
     // escalation stops
@@ -33,7 +37,6 @@ export type EventNamesWithPayload =
     `${devicePrefix}/vaporizer/start` |
     `${devicePrefix}/led-strip/start` |
     `${devicePrefix}/andon/start` |
-    `${devicePrefix}/conveyor/start` |
     `${generalPrefix}/escalation1/quest/stop` |
     `${generalPrefix}/escalation2/quest/stop`;
 

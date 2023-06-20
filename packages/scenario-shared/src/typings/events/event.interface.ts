@@ -38,3 +38,7 @@ export type Event =
     EventsWithMachinePayload |
     EventsWithIntensity |
     EventBase;
+
+export type EventPayloads = EventsWithSoundPayload['payload'] |
+    EventsWithMachinePayload['payload'] |
+    EventsWithIntensity['payload'];
