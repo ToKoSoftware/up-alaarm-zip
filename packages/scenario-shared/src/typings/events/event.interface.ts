@@ -1,4 +1,4 @@
-import {devicePrefix, EventNames, EventNamesWithPayload} from "./eventType.type";
+import {devicePrefix, EventNames, EventNamesWithPayload} from './event-names.type';
 
 export interface EventBase {
     id: string;
@@ -28,17 +28,7 @@ export interface EventsWithMachinePayload extends EventBase {
 export interface EventsWithIntensity extends EventBase {
     type: `${devicePrefix}/vaporizer/start`;
     payload: {
-        intensity: "light" | "medium" | "heavy";
-    }
-}
-
-const test: Event = {
-    id: '123',
-    timestamp: 123,
-    type: 'devices/vaporizer/start',
-    payload: {
-        intensity: 'medium',
-        soundId: '123'
+        intensity: 'light' | 'medium' | 'heavy';
     }
 }
 

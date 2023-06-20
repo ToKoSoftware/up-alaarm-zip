@@ -38,7 +38,3 @@ export type EventNamesWithPayload =
     `${generalPrefix}/escalation2/quest/stop`;
 
 export type EventNames = EventNamesWithoutPayload | EventNamesWithPayload;
-
-export interface Test {
-    type: EventNamesWithoutPayload;
-}
