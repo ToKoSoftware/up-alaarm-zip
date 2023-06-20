@@ -1,1 +1,7 @@
-# up-alaarm-zip
+# Alaarm
+
+## Installation 
+
+```bash
+npm i
+```
