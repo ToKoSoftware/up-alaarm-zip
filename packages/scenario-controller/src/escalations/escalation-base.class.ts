@@ -1,6 +1,6 @@
 import {sendEvent} from '../functions/send-event.func';
 import {EventNamesWithoutPayload, EventNamesWithPayload, EventPayloads} from '@alaarm/shared';
-import {Vars} from "../vars";
+import {Vars} from '../vars';
 
 export default class EscalationBase implements EscalationImplementation {
     public readonly escalationName: string = 'escalation_base';

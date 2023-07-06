@@ -1,7 +1,7 @@
 import {NextFunction, Request, Response} from 'express';
-import {AlaarmErrors} from "../src/enums/errors";
-import {wrapResponse} from "../src/functions/wrap-response.func";
-import {ErrorHandler} from "../src/interfaces/error-handler-interface";
+import {AlaarmErrors} from '../src/enums/errors';
+import {wrapResponse} from '../src/functions/wrap-response.func';
+import {ErrorHandler} from '../src/interfaces/error-handler-interface';
 
 
 export class CustomError extends Error {

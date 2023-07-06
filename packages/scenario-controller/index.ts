@@ -2,7 +2,7 @@ import {connect} from 'mqtt';
 import {Vars} from './src/vars';
 import Loggy from './src/functions/loggy.func';
 import Escalation1 from './src/escalations/escalation-1.class';
-import startServer from "./src/rest/start-server";
+import startServer from './src/rest/start-server';
 
 function main() {
 
