@@ -2,6 +2,7 @@ import {connect} from 'mqtt';
 import {Vars} from './src/vars';
 import Loggy from './src/functions/loggy.func';
 import Escalation1 from './src/escalations/escalation-1.class';
+import startServer from "./src/rest/start-server";
 
 function main() {
 
@@ -11,14 +12,14 @@ function main() {
      * Prevent node from crashing
      */
     process.on('uncaughtException', function (error) {
-        console.log(error.stack);
+        Vars.loggy.error(error.stack);
     });
     Vars.mqttClient = connect('mqtt://' + Vars.config.mqtt.host + ':' + Vars.config.mqtt.port);
     Vars.mqttClient.on('connect', () => {
-        console.log('Connected successfully');
+        Vars.loggy.info('[MQTT] Connected successfully');
     });
 
-    console.log('Connecting to MQTT on', Vars.config.mqtt.host);
+    Vars.loggy.log('[MQTT] Connecting to MQTT on', Vars.config.mqtt.host);
 
 
     Vars.mqttClient.publish('/test',
@@ -26,6 +27,8 @@ function main() {
             test: 'Test'
         })
     );
+
+    startServer();
 
     const escalation1 = new Escalation1();
     //const escalation2 = new Escalation2();
@@ -40,5 +43,5 @@ function main() {
 try {
     main();
 } catch (e) {
-    console.log(e);
+    Vars.loggy.error(e);
 }

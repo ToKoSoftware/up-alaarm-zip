@@ -3,7 +3,7 @@ import {Event, EventNames, EventPayloads, EventWithPayload} from '@alaarm/shared
 import {v4 as uuidv4} from 'uuid';
 
 export function sendEvent(topic: EventNames, data: EventPayloads | null) {
-    console.log('Sending data to topic', topic, 'with data', data);
+    Vars.loggy.info('[MQTT] Sending data to topic', topic, 'with data', data);
     const event: Event = {
         id: uuidv4(),
         timestamp: Date.now().toLocaleString() as any,

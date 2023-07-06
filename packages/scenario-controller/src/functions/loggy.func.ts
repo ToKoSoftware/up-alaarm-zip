@@ -1,6 +1,6 @@
 export default class Loggy {
 
-    constructor(public loggingEnabled: boolean = false) {
+    constructor(public loggingEnabled: boolean = true) {
     }
 
     public log(...data: unknown[]): void {

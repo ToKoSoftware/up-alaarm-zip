@@ -1,3 +1,5 @@
+import {Vars} from "../vars";
+
 export function escalation1() {
-    console.log('scenario1');
+    Vars.loggy.info('scenario1');
 }

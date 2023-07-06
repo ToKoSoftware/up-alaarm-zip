@@ -1,0 +1,12 @@
+{
+  "secret": "string",
+  "mqtt": {
+    "host": "localhost",
+    "port": "1883",
+    "username": "",
+    "password": ""
+  },
+  "rest": {
+    "port": "1337"
+  }
+}
