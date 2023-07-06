@@ -1,5 +1,5 @@
 import {NextFunction, Request, Response} from 'express';
-import {wrapResponse} from "../src/functions/wrap-response.func";
+import {wrapResponse} from '../src/functions/wrap-response.func';
 
 export async function userIsAuthorized(req: Request, res: Response, next: NextFunction): Promise<void> {
     // check if request has url parameter called secret

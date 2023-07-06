@@ -1,6 +1,6 @@
 import EscalationBase from './escalation-base.class';
-import {Vars} from "../../vars";
-import {EscalationName} from "../../interfaces/application-state.interface";
+import {Vars} from '../../vars';
+import {EscalationName} from '../../interfaces/application-state.interface';
 
 export default class Escalation2 extends EscalationBase {
     public readonly escalationName: EscalationName = 'Escalation2';

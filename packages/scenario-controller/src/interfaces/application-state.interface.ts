@@ -1,4 +1,4 @@
-import {EscalationImplementation} from "../scenario/escalations/escalation-base.class";
+import {EscalationImplementation} from '../scenario/escalations/escalation-base.class';
 
 export interface ApplicationState {
     currentEscalation: EscalationImplementation | null;

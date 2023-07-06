@@ -1,7 +1,7 @@
 import {EventNamesWithoutPayload, EventNamesWithPayload, EventPayloads} from '@alaarm/shared';
-import {Vars} from "../../vars";
-import {sendEvent} from "../../functions/send-event.func";
-import {EscalationName} from "../../interfaces/application-state.interface";
+import {Vars} from '../../vars';
+import {sendEvent} from '../../functions/send-event.func';
+import {EscalationName} from '../../interfaces/application-state.interface';
 
 export default class EscalationBase implements EscalationImplementation {
     public readonly escalationName: EscalationName = 'Escalation1';
