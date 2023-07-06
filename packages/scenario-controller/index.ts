@@ -1,8 +1,8 @@
 import {connect} from 'mqtt';
 import {Vars} from './src/vars';
 import Loggy from './src/functions/loggy.func';
-import Escalation1 from './src/escalations/escalation-1.class';
 import startServer from './src/rest/start-server';
+import Escalation1 from './src/scenario/escalations/escalation-1.class';
 
 function main() {
 
@@ -29,15 +29,6 @@ function main() {
     );
 
     startServer();
-
-    const escalation1 = new Escalation1();
-    //const escalation2 = new Escalation2();
-    //const escalation3 = new Escalation3();
-    let scenarioRunning = true;
-    while (scenarioRunning) {
-        escalation1.boot();
-        scenarioRunning = false;
-    }
 }
 
 try {
