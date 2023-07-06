@@ -1,9 +1,9 @@
 import express, {NextFunction, Request, Response} from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import {wrapResponse} from "../functions/wrap-response.func";
-import {CustomError, errorHandler} from "../../middleware/error-handler";
-import {Vars} from "../vars";
+import {wrapResponse} from '../functions/wrap-response.func';
+import {CustomError, errorHandler} from '../../middleware/error-handler';
+import {Vars} from '../vars';
 export default function startServer(): void {
 
     /**
