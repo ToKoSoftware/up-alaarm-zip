@@ -24,7 +24,7 @@ export default function startServer(): void {
      * Routes
      */
     app.get('/api/v1', (req, res) => res.send(wrapResponse(true)));
-    app.get('/api/v1/scenario/start', (req, res) => {
+    app.post('/api/v1/scenario/start', (req, res) => {
         if (Vars.applicationState.scenarioRunning) {
             throw new CustomError(AlaarmErrors.SCENARIO_ALREADY_RUNNING, 400);
         }
@@ -34,7 +34,7 @@ export default function startServer(): void {
         escalation1.boot();
     });
 
-    app.get('/api/v1/scenario/stop', (req, res) => {
+    app.post('/api/v1/scenario/stop', (req, res) => {
         Vars.applicationState.currentEscalation?.shutdown();
         resetState();
         res.send(wrapResponse(true, Vars.applicationState));

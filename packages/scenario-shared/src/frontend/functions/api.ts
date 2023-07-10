@@ -1,4 +1,4 @@
-import {getAxiosInstance} from "./axios-instance";
+import {getAxiosInstance} from './axios-instance';
 
 export async function getData(url: string) {
     try {
