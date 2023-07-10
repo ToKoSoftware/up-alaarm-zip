@@ -2,20 +2,11 @@
 
 import * as React from 'react';
 import {Button} from '@/components/ui/button';
-import {
-    Sheet,
-    SheetClose,
-    SheetContent,
-    SheetDescription,
-    SheetFooter,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-} from '@/components/ui/sheet';
+import {Sheet, SheetTrigger,} from '@/components/ui/sheet';
 import {StartScenarioForm} from '@/components/alaarm/start-scenario-form';
 import {Toaster} from '@/components/ui/toaster';
 import {postData} from '@alaarm/shared';
-import {toast, useToast} from '@/components/ui/use-toast';
+import {useToast} from '@/components/ui/use-toast';
 
 export default function Home() {
     const { toast } = useToast();

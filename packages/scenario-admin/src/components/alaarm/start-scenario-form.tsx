@@ -10,6 +10,7 @@ import {Input} from '@/components/ui/input';
 import {toast} from '@/components/ui/use-toast';
 import {Textarea} from '@/components/ui/textarea';
 import * as React from 'react';
+import {useEffect} from 'react';
 import {SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle} from '@/components/ui/sheet';
 import {getApiUrl, postData, setApiUrl} from '@alaarm/shared';
 
@@ -42,8 +43,15 @@ export function StartScenarioForm() {
         resolver: zodResolver(FormSchema),
     });
 
-    const secret = localStorage.getItem('secret') || '';
-    const json = localStorage.getItem('json') || '';
+    const [apiUrl, setApiUrl] = React.useState('');
+    const [secret, setSecret] = React.useState('');
+    const [json, setJson] = React.useState('');
+
+    useEffect(() => {
+        setApiUrl(localStorage.getItem('apiUrl') || '');
+        setSecret(localStorage.getItem('secret') || '');
+        setJson(localStorage.getItem('json') || '');
+    }, []);
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
         setApiUrl(data.url);
@@ -85,7 +93,7 @@ export function StartScenarioForm() {
                     <FormField
                         control={form.control}
                         name="url"
-                        defaultValue={getApiUrl()}
+                        defaultValue={apiUrl}
                         render={({field}) => (
                             <FormItem>
                                 <FormLabel className={formClassNames}>Controller-URI</FormLabel>
@@ -119,6 +127,7 @@ export function StartScenarioForm() {
                     <FormField
                         control={form.control}
                         name="json"
+                        defaultValue={json}
                         render={({field}) => (
                             <FormItem>
                                 <FormLabel className={formClassNames}>
