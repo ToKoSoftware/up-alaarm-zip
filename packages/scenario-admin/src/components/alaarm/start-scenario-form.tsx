@@ -10,7 +10,7 @@ import {Input} from '@/components/ui/input';
 import {toast} from '@/components/ui/use-toast';
 import {Textarea} from '@/components/ui/textarea';
 import * as React from 'react';
-import {SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle} from "@/components/ui/sheet";
+import {SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle} from '@/components/ui/sheet';
 import {getApiUrl, postData, setApiUrl} from '@alaarm/shared';
 
 
@@ -42,35 +42,35 @@ export function StartScenarioForm() {
         resolver: zodResolver(FormSchema),
     });
 
-    const secret = localStorage.getItem("secret") || "";
-    const json = localStorage.getItem("json") || "";
+    const secret = localStorage.getItem('secret') || '';
+    const json = localStorage.getItem('json') || '';
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
         setApiUrl(data.url);
-        localStorage.setItem("secret", data.secret);
-        localStorage.setItem("json", data.json);
+        localStorage.setItem('secret', data.secret);
+        localStorage.setItem('json', data.json);
         try {
-            const result = await postData("/api/v1/scenario/start", data);
+            const result = await postData('/api/v1/scenario/start', data);
             toast({
-                title: "Szenario startet...",
-                description: "Die Daten wurden erfolgreich an den Controller gesendet"
+                title: 'Szenario startet...',
+                description: 'Die Daten wurden erfolgreich an den Controller gesendet'
             });
         } catch (error: any) {
-            if (error?.response?.data?.data?.type === "SCENARIO_ALREADY_RUNNING") {
+            if (error?.response?.data?.data?.type === 'SCENARIO_ALREADY_RUNNING') {
                 toast({
-                    title: "Szenario läuft bereits",
-                    description: "Bitte das Szenario zuerst stoppen",
-                    variant: "destructive"
+                    title: 'Szenario läuft bereits',
+                    description: 'Bitte das Szenario zuerst stoppen',
+                    variant: 'destructive'
                 });
                 return;
             }
-            toast({title: "Fehler", description: "Ein Fehler ist aufgetreten", variant: "destructive"});
+            toast({title: 'Fehler', description: 'Ein Fehler ist aufgetreten', variant: 'destructive'});
             console.error('Fehler beim POST-Request:', error);
         }
 
     }
 
-    const formClassNames = "mt-32 mb-8";
+    const formClassNames = 'mt-32 mb-8';
 
     return (
         <SheetContent position="right" size="sm">

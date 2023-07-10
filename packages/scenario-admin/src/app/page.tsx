@@ -15,17 +15,17 @@ import {
 import {StartScenarioForm} from '@/components/alaarm/start-scenario-form';
 import {Toaster} from '@/components/ui/toaster';
 import {postData} from '@alaarm/shared';
-import {toast, useToast} from "@/components/ui/use-toast";
+import {toast, useToast} from '@/components/ui/use-toast';
 
 export default function Home() {
     const { toast } = useToast();
     const handleStop = async () => {
         try {
-            const result = await postData("/api/v1/scenario/stop", null);
+            const result = await postData('/api/v1/scenario/stop', null);
             console.log('POST-Request erfolgreich:', result);
-            toast({title: "Szenario gestoppt", description: "Das Szenario wurde erfolgreich gestoppt"});
+            toast({title: 'Szenario gestoppt', description: 'Das Szenario wurde erfolgreich gestoppt'});
         } catch (error) {
-            toast({title: "Fehler", description: "Das Szenario konnte nicht gestoppt werden", variant: "destructive"});
+            toast({title: 'Fehler', description: 'Das Szenario konnte nicht gestoppt werden', variant: 'destructive'});
             console.error('Fehler beim POST-Request:', error);
         }
     };
