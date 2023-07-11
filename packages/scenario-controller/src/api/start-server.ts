@@ -41,7 +41,9 @@ export default function startServer(): void {
     });
 
     app.get('/api/v1/scenario/quest', (req, res) => {
-        res.send(wrapResponse(true, Vars.applicationState));
+        res.send(wrapResponse(true, {
+            currentQuest: Vars.applicationState.currentQuest
+        }));
     });
 
     app.post('/api/v1/scenario/quest', (req, res) => {
