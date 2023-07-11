@@ -1,7 +1,7 @@
 import {EventNamesWithoutPayload, EventNamesWithPayload, EventPayloads} from '@alaarm/shared';
 import {Vars} from '../../vars';
 import {sendEvent} from '../../functions/send-event.func';
-import {EscalationName} from '../../interfaces/application-state.interface';
+import {EscalationName, QuestName} from '../../interfaces/application-state.interface';
 
 export default class EscalationBase implements EscalationImplementation {
     public readonly escalationName: EscalationName = 'Escalation1';
@@ -13,7 +13,11 @@ export default class EscalationBase implements EscalationImplementation {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    getQuest(): void {
+    getQuest(): QuestName {
+        const availableQuests: QuestName[] = ['Numbers', 'Reaction'];
+        const randomQuest = availableQuests[Math.floor(Math.random() * availableQuests.length)];
+        Vars.loggy.info(`[Scenario] EscalationBase.getQuest: ${randomQuest}`);
+        return randomQuest;
     }
 
     shutdown(): void {
@@ -34,6 +38,6 @@ export default class EscalationBase implements EscalationImplementation {
 export interface EscalationImplementation {
     escalationName: string;
     boot(): void;
-    getQuest(): void;
+    getQuest(): QuestName;
     shutdown(): void;
 }

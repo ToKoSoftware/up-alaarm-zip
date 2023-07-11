@@ -2,7 +2,6 @@ import {connect} from 'mqtt';
 import {Vars} from './src/vars';
 import Loggy from './src/functions/loggy.func';
 import startServer from './src/api/start-server';
-import Escalation1 from './src/scenario/escalations/escalation-1.class';
 
 function main() {
 
@@ -19,7 +18,7 @@ function main() {
         Vars.loggy.info('[MQTT] Connected successfully');
     });
 
-    Vars.loggy.log('[MQTT] Connecting to MQTT on', Vars.config.mqtt.host);
+    Vars.loggy.log('[MQTT] Connecting to MQTT on', Vars.config.mqtt.host + ':' + Vars.config.mqtt.port);
 
 
     Vars.mqttClient.publish('/test',

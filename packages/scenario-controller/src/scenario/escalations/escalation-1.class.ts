@@ -17,7 +17,7 @@ export default class Escalation1 extends EscalationBase {
     }
 
     getQuest() {
-        super.getQuest();
+        return super.getQuest();
     }
 
     shutdown() {

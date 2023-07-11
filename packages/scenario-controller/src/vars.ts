@@ -16,7 +16,8 @@ export abstract class Vars {
 export function getDefaultState() {
     return {
         currentEscalation: null,
-        scenarioRunning: false
+        scenarioRunning: false,
+        currentQuest: null,
     };
 }
 
