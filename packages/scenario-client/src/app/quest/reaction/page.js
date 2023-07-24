@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import {Button} from '@/components/ui/button';
 import './Reactionspeed.css';
+import IntroScreen from '@/components/generic/intro-screen';
 
 const Reactionspeed = () => {
     const [gameStarted, setGameStarted] = useState(false);
@@ -82,14 +83,14 @@ const Reactionspeed = () => {
         <div className="reactionspeed">
             {!gameStarted && !gameOver && (
                 <div className="instructions">
-                    <p className="instruction-text">
-          Etwas scheint mit der Kalibirerung der Maschine ein Probkem zu geben, welche schwerwiegende Fehler ausloest.
-          Um alle moeglichen Fehlerquellen auszuschließen, muessen die Eingaben neu kalibriert werden.
-          Zur korrekten Kalibierung muess der richtige gruen aufleuchtende Bereich innerhalb von 0,6 Sekunden gedrueckt werden.
-                    </p>
-                    <p className="instruction-text">
-            Die Bereiche fangen in einem schwarzen Zustand an. Falls du laenger als 0,6 Sekunden brauchst den gruen aufleuchtenden Bereich zu druekcne, kann die Maschine nicht   kalibriert werden. Es benoetigt 6 erfolgreiche Kalibrierungen.
-                    </p>
+                    <div>
+                        <IntroScreen title='Problem mit der Kalibrierung!' description='Etwas scheint mit der Kalibrierung der Maschine ein Problem zu geben, das schwerwiegende Fehler auslöst. 
+                        Um alle möglichen Fehlerquellen auszuschließen, müssen die Eingaben neu kalibriert werden. 
+                        Zur korrekten Kalibrierung muss der richtige grün aufleuchtende Bereich innerhalb von 0,6 Sekunden gedrückt werden. 
+                        Die Bereiche fangen in einem schwarzen Zustand an. Falls du länger als 0,6 Sekunden brauchst, 
+                        um den grün aufleuchtenden Bereich zu drücken, kann die Maschine nicht kalibriert werden. 
+                        Es benötigt 6 erfolgreiche Kalibrierungen.'></IntroScreen>
+                    </div>
                 </div>
             )}
             {!gameStarted && !gameOver && (

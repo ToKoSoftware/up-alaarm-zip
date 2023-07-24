@@ -77,7 +77,7 @@ const WireGame = () => {
         <div className="wire-game">
             {!gameStarted && (
                 <div>
-                    <IntroScreen title='Prozesskalibrierung' description='Der Algorithmus der Maschine scheint ein Problem zu haben. Mehrere Prozesse scheinen separat zu laufen, die wieder in die richtige Reihenfolge gebracht werden müssen.
+                    <IntroScreen title='Bug im Algorithmus!' description='Der Algorithmus der Maschine scheint ein Problem zu haben. Mehrere Prozesse scheinen separat zu laufen, die wieder in die richtige Reihenfolge gebracht werden müssen.
         Klicke die Nummern 1 bis 10 in aufsteigender Reihenfolge an, um dies zu tun.
         Nach jeweils 5 und 10 Sekunden werden die Zahlen gemischt.
         Für diese Reparatur sind lediglich 15 Sekunden vorgesehen!'></IntroScreen>

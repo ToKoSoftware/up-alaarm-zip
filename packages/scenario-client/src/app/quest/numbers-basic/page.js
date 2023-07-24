@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import {Button} from '@/components/ui/button';
 import './numbers-basic.css';
+import IntroScreen from '@/components/generic/intro-screen';
 
 const StartPage = ({ onStartGame }) => {
     return (
         <div>
-            <h1>Die Werkschritt-Reihenfolge der Maschine scheinen durcheinander gebracht zu sein.</h1>
-            <h2>Klicke auf die Nummern 1 bis 10 in aufsteigender Reihenfolge, um die richtige Reihenfolge wiederherzustellen.</h2>
-            <h2>Fuer die Operation sind nur 10 Sekunden vorgesehen!</h2>
+            <IntroScreen title='Fehler im Werkschritt!' description='Die Werkschritt-Reihenfolge der Maschine scheinen durcheinander gebracht zu sein. 
+            Klicke auf die Nummern 1 bis 10 in aufsteigender Reihenfolge,
+            um die richtige Reihenfolge wiederherzustellen. Für die Operation sind nur 10 Sekunden vorgesehen!'></IntroScreen>
             <Button onClick={onStartGame}>Reihenfolge wiederherstellen</Button>
         </div>
     );
