@@ -1,9 +1,10 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
+import {Button} from '@/components/ui/button';
 import './WireGame.css';
+import IntroScreen from '@/components/generic/intro-screen';
 
-const Page = () => {
+const WireGame = () => {
     const [numbers, setNumbers] = useState([]);
     const [countdown, setCountdown] = useState(15);
     const [gameOver, setGameOver] = useState(false);
@@ -76,18 +77,17 @@ const Page = () => {
         <div className="wire-game">
             {!gameStarted && (
                 <div>
-                    <p>
-        The algorithm of the machine seems to have a problem. <br />
-        In order to repair the machine, you need to click the numbers 1 through 10 in ascending order. <br />
-        After 5 and 10 seconds, the numbers will get scrambled. <br />
-         You will have 15 seconds once you start.
-                    </p>
-                    <button onClick={startGame}>Click here to start the game</button>
+                    <IntroScreen title='Bug im Algorithmus!' description='Der Algorithmus der Maschine scheint ein Problem zu haben. Mehrere Prozesse scheinen separat zu laufen, die wieder in die richtige Reihenfolge gebracht werden müssen.
+        Klicke die Nummern 1 bis 10 in aufsteigender Reihenfolge an, um dies zu tun.
+        Nach jeweils 5 und 10 Sekunden werden die Zahlen gemischt.
+        Für diese Reparatur sind lediglich 15 Sekunden vorgesehen!'></IntroScreen>
+
+                    <Button onClick={startGame}>Hier klicken um die Reparatur zu starten</Button>
                 </div>
             )}
             {gameStarted && !gameOver && (
                 <div>
-                    <p className="countdown">Time remaining: {countdown} seconds</p>
+                    <p className="countdown">Zeit uebrig: {countdown} Sekunden</p>
                     <div className="grid">
                         {numbers.map((number, index) => (
                             <div
@@ -107,12 +107,12 @@ const Page = () => {
                     {numbers.every(
                         (num, index) => num.clicked || index + 1 > expectedNumber
                     )
-                        ? 'You won!'
-                        : 'You lost!'}
+                        ? 'Das Problem wurde behoben!'
+                        : 'Das Problem konnte nicht behoben werden!'}
                 </p>
             )}
         </div>
     );
 };
 
-export default Page;
+export default WireGame;

@@ -1,8 +1,10 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import {Button} from '@/components/ui/button';
 import './Reactionspeed.css';
+import IntroScreen from '@/components/generic/intro-screen';
 
-const Page = () => {
+const Reactionspeed = () => {
     const [gameStarted, setGameStarted] = useState(false);
     const [roundCount, setRoundCount] = useState(0);
     const [isLeftGreenVisible, setIsLeftGreenVisible] = useState(false);
@@ -33,7 +35,7 @@ const Page = () => {
             // Check if the user clicked the correct green square within 0.5 seconds
             const greenScreenTimeout = setTimeout(() => {
                 setRoundSuccess(false);
-                if (roundCount < 4) {
+                if (roundCount < 7) {
                     setGameOver(true);
                 }
             }, 600);
@@ -81,24 +83,20 @@ const Page = () => {
         <div className="reactionspeed">
             {!gameStarted && !gameOver && (
                 <div className="instructions">
-                    <p className="instruction-text">
-            There is something wrong with the calibration of the machine which
-            leads to major malfunctions. It is vital that the machine inputs are
-            correctly calibrated to eliminate any sources of error. To ensure
-            correct calibration, click the correct square as fast as possible whenever
-            it turns green.
-                    </p>
-                    <p className="instruction-text">
-            The squares will start in a black state. If you take longer than 0.6
-            seconds to click the green square, the machine can&apos;t calibrate. It
-            takes 6 calibration inputs to successfully calibrate the machine.
-                    </p>
+                    <div>
+                        <IntroScreen title='Problem mit der Kalibrierung!' description='Etwas scheint mit der Kalibrierung der Maschine ein Problem zu geben, das schwerwiegende Fehler auslöst. 
+                        Um alle möglichen Fehlerquellen auszuschließen, müssen die Eingaben neu kalibriert werden. 
+                        Zur korrekten Kalibrierung muss der richtige grün aufleuchtende Bereich innerhalb von 0,6 Sekunden gedrückt werden. 
+                        Die Bereiche fangen in einem schwarzen Zustand an. Falls du länger als 0,6 Sekunden brauchst, 
+                        um den grün aufleuchtenden Bereich zu drücken, kann die Maschine nicht kalibriert werden. 
+                        Es benötigt 6 erfolgreiche Kalibrierungen.'></IntroScreen>
+                    </div>
                 </div>
             )}
             {!gameStarted && !gameOver && (
-                <button onClick={handleStartGame} className="start-button">
-          Start Game
-                </button>
+                <Button onClick={handleStartGame}>
+          Kalibrierung starten
+                </Button>
             )}
             {gameStarted && (
                 <div className="game-container">
@@ -117,15 +115,15 @@ const Page = () => {
                     </div>
                 </div>
             )}
-            <div className="round-counter">Round: {roundCount}</div>
+            <div className="round-counter">Runde: {roundCount}</div>
             {gameOver && (
-                <div className="lose-message">You did not calibrate correctly!</div>
+                <div className="lose-message">Die Kalibierung war nicht erfolgreich!</div>
             )}
             {gameWon && (
-                <div className="win-message">You calibrated the machine correctly!</div>
+                <div className="win-message">Die Kalibrierung war erfolgreich!</div>
             )}
         </div>
     );
 };
 
-export default Page;
+export default Reactionspeed;
