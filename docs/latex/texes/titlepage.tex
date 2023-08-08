@@ -1,0 +1,41 @@
+\begin{titlepage}
+\vspace*{4.5cm}
+\centering
+\includegraphics[width=2.5cm]{res/uni_potsdam_logo.pdf}
+\vfill
+\begin{tabu} to \textwidth {X[c]}
+	\huge{\textbf{{\textsc{\titel}}}}\\\\
+	\large{\textsc{\arbtyp}}\\
+\end{tabu}
+\\[1cm]
+\centering{
+\autornameeins\\
+\autornamesechs\\
+\autornamedrei\\
+\autornamevier\\
+\autornamezwei\\
+\autornamesieben\\
+\autornamefuenf\\
+}
+\vfill
+\begin{table}[h]
+    \small
+    \begin{tabular}{ll}
+        Fakultät: & \fak \\
+        Lehrstuhl: & \lehrstuhl \\
+        Lehrveranstaltung: & \lv \\
+        Bearbeitungszeitraum: & \zeitraum \\
+        Dozenten: & \lp
+    \end{tabular}
+\end{table}
+
+\end{titlepage}
+
+\renewcommand{\thepage}{\Roman{page}}
+\setcounter{page}{1}
+{\small\tableofcontents}
+\cleardoublepage
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+\fancyfoot[C]{Seite \thepage \hspace{1pt} von \pageref*{LastPage}}

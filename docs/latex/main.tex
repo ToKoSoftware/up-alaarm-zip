@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, ngerman]{babel}
+\usepackage{parskip} 
+\usepackage{abstract}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{varioref}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false, breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{cleveref}
+\usepackage{icomma}
+\usepackage{tabu,booktabs}
+\usepackage{tcolorbox}
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{xspace}
+
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\renewcommand{\arraystretch}{1.1}
+\usepackage{listings}
+\usepackage{acronym}
+\usepackage{minted}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{arabtex}
+\usepackage{enumitem}
+\setlist[itemize]{topsep=-0.2cm}
+\usepackage[format=plain,
+            font={it, small}]{caption}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+\usepackage{threeparttable}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyhead[L]{}
+\renewcommand{\headruleskip}{3pt}
+\usepackage{afterpage}
+\usepackage{tablefootnote}
+\usepackage[hang,flushmargin]{footmisc}
+%\usepackage{showframe}
+% % % % % % % % % % % % % % % % % % % % %
+%Schriften - nur eine auskommentieren
+	%Latin Modern - Standard
+\usepackage{lmodern}
+	%Times Roman für strenge Dozenten
+		%\usepackage{times}
+	%Garamond - sieht toll aus, aber eher exotisch
+		%\usepackage[cmintegrals,cmbraces]{newtxmath}\usepackage{ebgaramond-maths} %\usepackage{helvet}
+
+%Hurenkinder, Schusterjungen
+\widowpenalties=3 10000 10000 150
+
+\newcommand*\MeasuredFigureLabel[1]{
+    \addtocounter{figure}{-1}
+    \phantomcaption
+    \label{#1}
+}
+
+% % % % % % % % % % % % % % % % % % % % %
+%LITERATUR
+%Fußnote _ODER_ Amerikanisch auskommentieren
+
+	%Amerikanische In-Text-Zitierweise
+\usepackage[english]{babel}
+\usepackage{csquotes}% Recommended
+\usepackage[style=authoryear-ibid,backend=biber]{biblatex}
+
+
+	%Deutsches Fußnotensystem
+		%\usepackage[backend=biber,style=authortitle-dw,firstfull,maxcitenames=1]{biblatex}\DeclareFieldFormat{title}{\mkbibemph{#1}}\DeclareFieldFormat{citetitle}{\mkbibemph{#1}}\renewcommand{\cite}{\footcite}
+
+%Ressource
+\bibliography{bibtex.bib}
+% for et. al. in italic
+\usepackage{xpatch}
+\xpatchbibmacro{name:andothers}{%
+  \bibstring{andothers}%
+}{%
+  \bibstring[\emph]{andothers}%
+}{}{}
+% For using '&' insead of 'und' when \cite is used -> for text use \textcite
+\DeclareDelimFormat[bib,cite]{finalnamedelim}{%
+  \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+  \addspace\&\space}
+
+% % % % % % % % % % % % % % % % % % % % %
+\makeatletter
+
+
+\begin{document}
+
+\input{texes/metadaten.tex}
+\input{texes/titlepage.tex}
+\pagebreak{}
+\selectlanguage{english} 
+\begin{abstract}
+Die vorliegende Dokumentation bietet einen umfassenden Einblick in die Konzeption und Umsetzung eines hochimmersiven Lernszenarios für eine hybride Simulationsumgebung. Sie behandelt ein breites Spektrum an Aspekten, darunter eine gründliche Recherche zu existierenden kommerziellen Lösungen, Übungsszenarien, Standardabläufen und wissenschaftlichen Studien. Es wird hervorgehoben, dass bereits immersive Softwarelösungen für das Training und die Vorbereitung auf kritische Situationen existieren. Ein Beispiel ist eine Anwendung, die Grundschullehrern mittels virtueller Realität das richtige Verhalten in Brandsituationen vermittelt. Darüber hinaus gibt es industrielle Alarm-Management-Systeme, die in VR-Anwendungen für die Fertigung integriert sind. Diese Systeme zielen darauf ab, die Handhabung von Alarmen zu verbessern und somit die Sicherheit der Arbeitnehmer zu erhöhen. Die Konzeption des finalen Szenarios folgte einem mehrstufigen Ansatz. Zunächst wurde ein individuelles Brainstorming durchgeführt, bei dem verschiedene Komponenten und Abläufe der Szenarien diskutiert wurden. Verschiedene Ideen wurden erörtert, darunter die Verwendung von Alarmsignalen in Form von Bass oder Sirene, die Verwendung von Brandgeruch als Warnsignal und den Einsatz von visuellen Effekten mit flackerndem Licht. Ein weiterer, ebenso wichtiger Bestandteil der Dokumentation ist die "Beschreibungskarte", die den Ablauf des Szenarios und seine Eskalationsstufen detailliert darstellt. Das Szenario ist komplex aufgebaut und umfasst eine Vielzahl von Komponenten, darunter ein Teilnehmer, ein Tablet und verschiedene physische Elemente wie einen Subwoofer/Lautsprecher, eine Wärmelampe/Licht und einen Vaporizer. Es ist in drei Eskalationsstufen strukturiert, die nacheinander aktiviert werden. Jede Eskalationsstufe beinhaltet einen spezifischen Entstörungsvorgang, den der Teilnehmer lösen muss. Es werden auch geschätzte Zeitangaben für die Durchführung des Szenarios gegeben.
+\end{abstract}
+
+\pagebreak
+
+\selectlanguage{ngerman} 
+
+
+\onehalfspacing
+
+%\input{chapters/1} \clearpage
+\input{chapters/1} \clearpage
+\input{chapters/2} \clearpage
+\input{chapters/3} \clearpage
+
+\includegraphics[pages=1, scale=0.4]{res/Finales Szenario BPMN(korrigiert).drawio-5.pdf}
+%\includegraphics[pages=1, scale=0.45]{res/Finales Szenario BPMN(korrigiert).drawio-5.pdf}
+
+\input{chapters/4} \clearpage
+\input{chapters/5} \clearpage
+%\input{/pfad/zum/inhalt} \newpage
+\setlength\bibitemsep{12pt}
+\printbibliography[title=Literaturverzeichnis]
+
+%\input{chapters/appendix}
+%\input{texes/eiderkl.tex}
+\end{document}

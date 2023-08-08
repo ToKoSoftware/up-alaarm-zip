@@ -47,3 +47,6 @@ To run just one of the packages, use the following command:
 ```bash
 npx lerna run dev --scope=@alaarm/scenario-admin
 ```
+
+## Further documentation
+Further documentation can be found in the [docs](./docs) folder.

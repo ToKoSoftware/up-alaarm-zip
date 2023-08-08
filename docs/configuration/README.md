@@ -1,5 +1,8 @@
-# Configuration
+# Szenario Konfiguration
 
+Ein Szenario besteht aus mehreren Eskalationsstufen. Jede Eskalationsstufe besteht aus Immersionsobjekten, wie dem Alarm-Sound, einer Maschine, die repariert werden muss und einem Reparatur-Quest. Die Eskalationsstufen werden nacheinander durchlaufen. Die letzte Eskalationsstufe ist die finale Eskalationsstufe. Wenn diese Eskalationsstufe abgeschlossen ist, ist das Szenario beendet.
+
+Das Szenario wir durch eine JSON-Konfiguration gesteuert, welche das nachfolgende Format hat:
 ```json
 {
   "general": {
