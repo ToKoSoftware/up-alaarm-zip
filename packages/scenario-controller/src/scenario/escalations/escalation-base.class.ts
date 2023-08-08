@@ -1,7 +1,7 @@
-import {EventNamesWithoutPayload, EventNamesWithPayload, EventPayloads} from '@alaarm/shared';
+import {EscalationImplementation, EventNamesWithoutPayload, EventNamesWithPayload, EventPayloads} from '@alaarm/shared';
 import {Vars} from '../../vars';
 import {sendEvent} from '../../functions/send-event.func';
-import {EscalationName, QuestName} from '../../interfaces/application-state.interface';
+import {EscalationName, QuestName} from '../../../../scenario-shared/src/state/application-state.interface';
 
 export default class EscalationBase implements EscalationImplementation {
     public readonly escalationName: EscalationName = 'Escalation1';
@@ -33,11 +33,4 @@ export default class EscalationBase implements EscalationImplementation {
         Vars.loggy.info(`[Scenario] EscalationBase.emit: ${eventName}`);
         sendEvent(eventName, payload);
     }
-}
-
-export interface EscalationImplementation {
-    escalationName: string;
-    boot(): void;
-    getQuest(): QuestName;
-    shutdown(): void;
 }

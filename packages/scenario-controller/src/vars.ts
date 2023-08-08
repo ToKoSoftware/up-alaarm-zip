@@ -1,8 +1,7 @@
 import Loggy from './functions/loggy.func';
 import {Configuration} from './interfaces/configuration.interface';
-import {ScenarioConfiguration} from '@alaarm/shared';
+import {ApplicationState, ScenarioConfiguration} from '@alaarm/shared';
 import {Client} from 'mqtt';
-import {ApplicationState} from './interfaces/application-state.interface';
 
 
 export abstract class Vars {

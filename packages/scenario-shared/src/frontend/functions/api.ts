@@ -1,6 +1,7 @@
 import {getAxiosInstance} from './axios-instance';
+import {ApiResponse} from '../../api';
 
-export async function getData(url: string) {
+export async function getData<T>(url: string): Promise<ApiResponse<T>> {
     try {
         const response = await getAxiosInstance().get(url);
         return response.data;
