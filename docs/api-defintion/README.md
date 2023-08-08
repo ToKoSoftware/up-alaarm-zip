@@ -16,11 +16,7 @@ Events werden über MQTT gesendet. Eine Nachricht, welche übermittelt wird folg
 
 Wobei
 
-**$TIMESTAMP** ein Unix Timestamp in Sekunden ist.
-
-**$EVENT-NAME** der Name des Events ist. Die Namen der Events sind in der folgenden Tabelle aufgelistet.
-
-Definitionen der Events und deren Payloads sind in den folgenden Kapiteln zu finden.
+```$TIMESTAMP``` ein Unix Timestamp in Sekunden, und ```$EVENT-NAME``` der Name des Events ist. Definitionen der Events und deren Payloads sind in den folgenden Kapiteln zu finden.
 
 | Beschreibung         | Link                                                            |
 |----------------------|-----------------------------------------------------------------|
