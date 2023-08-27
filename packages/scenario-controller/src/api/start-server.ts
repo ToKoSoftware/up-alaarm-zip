@@ -4,8 +4,8 @@ import bodyParser from 'body-parser';
 import {wrapResponse} from '../functions/wrap-response.func';
 import {CustomError, errorHandler} from '../../middleware/error-handler';
 import {resetState, Vars} from '../vars';
-import Escalation1 from '../scenario/escalations/escalation-1.class';
 import {AlaarmErrors} from '../enums/errors';
+import Escalation1 from '../scenario/escalations/escalation-1.class';
 import Escalation2 from '../scenario/escalations/escalation-2.class';
 import Escalation3 from '../scenario/escalations/escalation-3.class';
 

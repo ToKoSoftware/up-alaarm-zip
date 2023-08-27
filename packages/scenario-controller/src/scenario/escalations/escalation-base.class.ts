@@ -1,7 +1,7 @@
 import {EscalationImplementation, EventNamesWithoutPayload, EventNamesWithPayload, EventPayloads} from '@alaarm/shared';
 import {Vars} from '../../vars';
 import {sendEvent} from '../../functions/send-event.func';
-import {EscalationName, QuestName} from '../../../../scenario-shared/src/state/application-state.interface';
+import {EscalationName, QuestName} from '@alaarm/shared';
 
 export default class EscalationBase implements EscalationImplementation {
     public readonly escalationName: EscalationName = 'Escalation1';

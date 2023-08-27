@@ -13,6 +13,8 @@ export default class Escalation1 extends EscalationBase {
         this.emitWithPayload('devices/andon/start', {machineId: 'escalation1'});
         setTimeout(() => {
             this.emit('devices/conveyor/stop');
+            Vars.applicationState.currentQuest = this.getQuest();
+            Vars.applicationState.currentMachine = 'machine-1';
         }, 5000);
     }
 

@@ -1,6 +1,6 @@
 import EscalationBase from './escalation-base.class';
 import {Vars} from '../../vars';
-import {EscalationName} from '../../../../scenario-shared/src/state/application-state.interface';
+import {EscalationName} from '@alaarm/shared';
 
 export default class Escalation3 extends EscalationBase {
     public readonly escalationName: EscalationName = 'Escalation3';
@@ -14,6 +14,7 @@ export default class Escalation3 extends EscalationBase {
         setTimeout(() => {
             this.emit('devices/conveyor/stop');
             Vars.applicationState.currentQuest = this.getQuest();
+            Vars.applicationState.currentMachine = 'machine-3';
         }, 5000);
     }
 

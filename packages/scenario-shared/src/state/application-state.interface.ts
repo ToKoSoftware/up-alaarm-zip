@@ -1,6 +1,7 @@
 export interface ApplicationState {
     currentEscalation: EscalationImplementation | null;
     scenarioRunning: boolean;
+    currentMachine: string | null;
     currentQuest: QuestName | null;
 }
 

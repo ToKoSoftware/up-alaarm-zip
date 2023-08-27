@@ -12,15 +12,13 @@ export default function Home() {
         if (!data) {
             return data;
         }
-        console.log(data.scenarioRunning);
         if (data.scenarioRunning) {
             router.push('/qr');
         }
         return data;
     }
     );
-    const {data, error, isLoading} = useSWR('/state', fetcher, {refreshInterval: 1000})
-    ;
+    const {data, error, isLoading} = useSWR('/state', fetcher, {refreshInterval: 1000});
 
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center">
