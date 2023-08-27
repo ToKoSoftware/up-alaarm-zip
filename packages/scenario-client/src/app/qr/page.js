@@ -1,6 +1,6 @@
 'use client';
 import React, {useState} from 'react';
-import QrReader from 'react-qr-reader-es6';
+import QrReader from 'react-qr-scanner';
 import {useRouter} from 'next/navigation';
 import {Button} from '@/components/ui/button';
 import './qr.css';

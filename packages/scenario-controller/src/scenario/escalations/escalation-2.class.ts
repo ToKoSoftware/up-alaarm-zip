@@ -1,6 +1,6 @@
 import EscalationBase from './escalation-base.class';
 import {Vars} from '../../vars';
-import {EscalationName} from "@alaarm/shared";
+import {EscalationName} from '@alaarm/shared';
 
 export default class Escalation2 extends EscalationBase {
     public readonly escalationName: EscalationName = 'Escalation2';
