@@ -1,11 +1,11 @@
 'use client';
 import React, {useState} from 'react';
-import QrReader from 'react-qr-scanner';
 import {useRouter} from 'next/navigation';
 import {Button} from '@/components/ui/button';
 import './qr.css';
 import useSWR from 'swr';
-import {getData} from '@alaarm/shared';
+import {ApplicationState, getData} from '@alaarm/shared';
+import {QrScanner} from '@yudiel/react-qr-scanner';
 
 const App = () => {
     const [scannedCode, setScannedCode] = useState('');
@@ -13,19 +13,19 @@ const App = () => {
     const [isReaderOpen, setIsReaderOpen] = useState(false);
     const [expectedCode, setExpectedCode] = useState('machine-1');
 
-    const fetcher = (url) => getData('/api/v1/state').then(({data}) => {
-        if (!data) {
+    const fetcher = (url: string) => getData<ApplicationState>('/api/v1/state').then(({data}) => {
+            if (!data) {
+                return data;
+            }
+            if (data.scenarioRunning) {
+                router.push('/qr');
+            }
             return data;
         }
-        if (data.scenarioRunning) {
-            router.push('/qr');
-        }
-        return data;
-    }
     );
     const {data, error, isLoading} = useSWR('/state', fetcher, {refreshInterval: 1000});
 
-    const handleScan = (data) => {
+    const handleScan = (data: string) => {
         if (data) {
             setScannedCode(data);
             setIsReaderOpen(false);
@@ -48,7 +48,7 @@ const App = () => {
     };
 
 
-    const handleError = (error) => {
+    const handleError = (error: any) => {
         console.error(error);
     };
 
@@ -58,18 +58,18 @@ const App = () => {
 
     const router = useRouter();
 
-    const redirectToGame = (machineCode) => {
+    const redirectToGame = (machineCode: string) => {
         switch (machineCode) {
-        case 'machine-1':
-            router.push('quest/numbers-basic');
-            break;
-        case 'machine-2':
-            router.push('quest/reaction');
-            break;
-        case 'machine-3':
-            router.push('quest/numbers-advanced');
-            break;
-        default:
+            case 'machine-1':
+                router.push('quest/numbers-basic');
+                break;
+            case 'machine-2':
+                router.push('quest/reaction');
+                break;
+            case 'machine-3':
+                router.push('quest/numbers-advanced');
+                break;
+            default:
             // Handle unexpected machine codes
         }
     };
@@ -95,7 +95,16 @@ const App = () => {
             )}
             {renderMessage()}
             {isReaderOpen && !scannedCode && (
-                <QrReader delay={300} onError={handleError} onScan={handleScan} className="qr-reader"/>
+                <QrScanner
+                    onDecode={(result: string) => {
+                        console.log(result);
+                        handleScan(result)
+                    }}
+                    onError={(error) => {
+                        console.log(error?.message);
+                        handleError(error)
+                    }}
+                />
             )}
         </div>
     );
