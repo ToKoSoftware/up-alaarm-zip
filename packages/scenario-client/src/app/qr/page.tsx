@@ -14,14 +14,14 @@ const App = () => {
     const [expectedCode, setExpectedCode] = useState('machine-1');
 
     const fetcher = (url: string) => getData<ApplicationState>('/api/v1/state').then(({data}) => {
-            if (!data) {
-                return data;
-            }
-            if (data.scenarioRunning) {
-                router.push('/qr');
-            }
+        if (!data) {
             return data;
         }
+        if (data.scenarioRunning) {
+            router.push('/qr');
+        }
+        return data;
+    }
     );
     const {data, error, isLoading} = useSWR('/state', fetcher, {refreshInterval: 1000});
 
@@ -60,16 +60,16 @@ const App = () => {
 
     const redirectToGame = (machineCode: string) => {
         switch (machineCode) {
-            case 'machine-1':
-                router.push('quest/numbers-basic');
-                break;
-            case 'machine-2':
-                router.push('quest/reaction');
-                break;
-            case 'machine-3':
-                router.push('quest/numbers-advanced');
-                break;
-            default:
+        case 'machine-1':
+            router.push('quest/numbers-basic');
+            break;
+        case 'machine-2':
+            router.push('quest/reaction');
+            break;
+        case 'machine-3':
+            router.push('quest/numbers-advanced');
+            break;
+        default:
             // Handle unexpected machine codes
         }
     };
@@ -98,11 +98,11 @@ const App = () => {
                 <QrScanner
                     onDecode={(result: string) => {
                         console.log(result);
-                        handleScan(result)
+                        handleScan(result);
                     }}
                     onError={(error) => {
                         console.log(error?.message);
-                        handleError(error)
+                        handleError(error);
                     }}
                 />
             )}
