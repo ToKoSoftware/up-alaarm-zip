@@ -95,7 +95,7 @@ const Reactionspeed = () => {
             )}
             {!gameStarted && !gameOver && (
                 <Button onClick={handleStartGame}>
-          Kalibrierung starten
+                    Kalibrierung starten
                 </Button>
             )}
             {gameStarted && (
