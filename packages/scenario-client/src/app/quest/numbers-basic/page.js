@@ -7,9 +7,9 @@ import IntroScreen from '@/components/generic/intro-screen';
 const StartPage = ({ onStartGame }) => {
     return (
         <div>
-            <IntroScreen title='Fehler im Werkschritt!' description='Die Werkschritt-Reihenfolge der Maschine scheinen durcheinander gebracht zu sein. 
-            Klicke auf die Nummern 1 bis 10 in aufsteigender Reihenfolge,
-            um die richtige Reihenfolge wiederherzustellen. Für die Operation sind nur 10 Sekunden vorgesehen!'></IntroScreen>
+            <IntroScreen title='Fehler E5432 im Betriebsablauf!' description='Die Werkschritt-Reihenfolge der Maschine scheit durcheinander gebracht worden zu sein.
+            Klicke auf die Nummern 1 bis 10 in aufsteigender Reihenfolge, um die richtige Reihenfolge wiederherzustellen.
+            Für die Operation sind nur 10 Sekunden vorgesehen!'></IntroScreen>
             <Button onClick={onStartGame}>Reihenfolge wiederherstellen</Button>
         </div>
     );
