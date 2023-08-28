@@ -5,7 +5,7 @@ This is a research project by Students of the [Chair of Business Informatics, Pr
 
 ## Introduction to Alaarm
 
-TBD
+The project aims to enhance the immersion of alarm scenarios by implementating specific components as a simulation environment to intensify participants' stress levels and provide a realistic mVP scenario. This opens up research opportunities in the realm of human-machine interaction within the Industry 4.0 environment, including the assessment of participants' responsiveness and effectiveness in hazardous situations
 
 ## Project structure
 
