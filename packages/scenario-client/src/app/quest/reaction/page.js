@@ -84,12 +84,12 @@ const Reactionspeed = () => {
             {!gameStarted && !gameOver && (
                 <div className="instructions">
                     <div>
-                        <IntroScreen title='Problem mit der Kalibrierung!' description='Etwas scheint mit der Kalibrierung der Maschine ein Problem zu geben, das schwerwiegende Fehler auslöst. 
-                        Um alle möglichen Fehlerquellen auszuschließen, müssen die Eingaben neu kalibriert werden. 
+                        <IntroScreen title='Problem K1213 mit der Kalibrierung!' description='Etwas scheint mit der Kalibrierung der Maschine ein Problem zu geben, wodurch schwerwiegende Fehler auslöst wurden.
+                        Durch eine Fehlkalibrierung ist es zu einem Kabelbrand gekommen. Um den Schaden zu begrenzen, müssen die Eingaben schnellstmöglich neu kalibriert werden, um einen Brand zu verhindern.
                         Zur korrekten Kalibrierung muss der richtige grün aufleuchtende Bereich innerhalb von 0,6 Sekunden gedrückt werden. 
                         Die Bereiche fangen in einem schwarzen Zustand an. Falls du länger als 0,6 Sekunden brauchst, 
-                        um den grün aufleuchtenden Bereich zu drücken, kann die Maschine nicht kalibriert werden. 
-                        Es benötigt 6 erfolgreiche Kalibrierungen.'></IntroScreen>
+                        um den grün aufleuchtenden Bereich zu drücken, kann die Maschine nicht richtig kalibriert werden.
+                        Es werden 6 erfolgreiche Kalibrierungen benötigt.'></IntroScreen>
                     </div>
                 </div>
             )}
