@@ -13,6 +13,12 @@
 \usepackage{varioref}
 \usepackage[unicode=true,pdfusetitle,
  bookmarks=true,bookmarksnumbered=false,bookmarksopen=false, breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+}
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{lipsum}
@@ -106,11 +112,25 @@
 
 \input{texes/metadaten.tex}
 \input{texes/titlepage.tex}
+
 \pagebreak{}
 \selectlanguage{english} 
-\begin{abstract}
-Die vorliegende Dokumentation bietet einen umfassenden Einblick in die Konzeption und Umsetzung eines hochimmersiven Lernszenarios für eine hybride Simulationsumgebung. Sie behandelt ein breites Spektrum an Aspekten, darunter eine gründliche Recherche zu existierenden kommerziellen Lösungen, Übungsszenarien, Standardabläufen und wissenschaftlichen Studien. Es wird hervorgehoben, dass bereits immersive Softwarelösungen für das Training und die Vorbereitung auf kritische Situationen existieren. Ein Beispiel ist eine Anwendung, die Grundschullehrern mittels virtueller Realität das richtige Verhalten in Brandsituationen vermittelt. Darüber hinaus gibt es industrielle Alarm-Management-Systeme, die in VR-Anwendungen für die Fertigung integriert sind. Diese Systeme zielen darauf ab, die Handhabung von Alarmen zu verbessern und somit die Sicherheit der Arbeitnehmer zu erhöhen. Die Konzeption des finalen Szenarios folgte einem mehrstufigen Ansatz. Zunächst wurde ein individuelles Brainstorming durchgeführt, bei dem verschiedene Komponenten und Abläufe der Szenarien diskutiert wurden. Verschiedene Ideen wurden erörtert, darunter die Verwendung von Alarmsignalen in Form von Bass oder Sirene, die Verwendung von Brandgeruch als Warnsignal und den Einsatz von visuellen Effekten mit flackerndem Licht. Ein weiterer, ebenso wichtiger Bestandteil der Dokumentation ist die "Beschreibungskarte", die den Ablauf des Szenarios und seine Eskalationsstufen detailliert darstellt. Das Szenario ist komplex aufgebaut und umfasst eine Vielzahl von Komponenten, darunter ein Teilnehmer, ein Tablet und verschiedene physische Elemente wie einen Subwoofer/Lautsprecher, eine Wärmelampe/Licht und einen Vaporizer. Es ist in drei Eskalationsstufen strukturiert, die nacheinander aktiviert werden. Jede Eskalationsstufe beinhaltet einen spezifischen Entstörungsvorgang, den der Teilnehmer lösen muss. Es werden auch geschätzte Zeitangaben für die Durchführung des Szenarios gegeben.
-\end{abstract}
+\renewcommand{\listfigurename}{Abbildungsverzeichnis}
+% Abbildungsverzeichnis
+\cleardoublepage
+\listoffigures
+\newpage
+\pagebreak{}
+\input{texes/abstract}
+\pagebreak
+
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+\fancyfoot[C]{Seite \thepage \hspace{1pt} von \pageref*{LastPage}}
+
+\setcounter{page}{1}
+
 
 \pagebreak
 
@@ -124,11 +144,13 @@ Die vorliegende Dokumentation bietet einen umfassenden Einblick in die Konzeptio
 \input{chapters/2} \clearpage
 \input{chapters/3} \clearpage
 
-\includegraphics[pages=1, scale=0.4]{res/Finales Szenario BPMN(korrigiert).drawio-5.pdf}
-%\includegraphics[pages=1, scale=0.45]{res/Finales Szenario BPMN(korrigiert).drawio-5.pdf}
+%\includegraphics[pages=1, scale=0.4]{res/Finales Szenario BPMN(korrigiert).drawio-5.pdf}
+%(\includegraphics[pages=1, scale=0.45]{res/Finales Szenario BPMN(korrigiert).drawio-5.pdf})
 
 \input{chapters/4} \clearpage
 \input{chapters/5} \clearpage
+\input{chapters/6} \clearpage
+\input{chapters/appendix} \clearpage
 %\input{/pfad/zum/inhalt} \newpage
 \setlength\bibitemsep{12pt}
 \printbibliography[title=Literaturverzeichnis]

@@ -1,8 +1,22 @@
+\section{Vorgehen}
+
+In dem folgenden Abschnitt wird das Vorgehen der Projektgruppe zur Realisierung des Alarmszenarios erläutert. Hierzu wird auf den Arbeitsmodus  und erarbeitete Arbeitsergebnisse eingegangen.
+
+Die Zielsetzung der Projektarbeit \textit{Alaarm-ZIP} lag in der Schaffung eines interaktiven Alarmsimulation, in welcher Übungsteilnehmer fiktive Alarmszenarien im Kontext einer vernetzten Industrie 4.0 Anlage durchlaufen. Die Szenarien werden durch Effekte wie dem Leuchten einer LED-Lampe realisiert, welche beim Übungsteilnehmer einen immersiven Effekt hervorrufen sollen. 
+
+Um die Zielsetzung des Projektes zu realisieren, wurde zum Start des Projektes in der siebenköpfigen Projektgruppe zunächst Themen der Projektorganisation, etwa der Arbeitsmodus und die eingesetzen Tools zum Projektmanagement, festgelegt. Es wurde ein wöchentlicher Sync-Termin mit der Länge von 1 Stunde etabliert. Dieser Termin diente zur gemeinsamen Diskussion der Ergebnisse der vorausgegangenen Woche, der Definition und Festlegung neuer Arbeitspakete für die kommende Woche und der Abstimmung von Terminen in Präsenz zur Erarbeitung größerer Aufgaben von besonderer Bedeutung für den Projektfortschritt. An den Projektstart schloss in der darauffolgenden Woche ein Präsenztermin an, um mithilfe von erarbeiteten Rechercheergebnissen zu verwandten Themen von Alarmszenarien und -simulationen die eigene Aufgabenstellung mittels Brainstorming zu vertiefen. Die Ergebnisse wurden als Mindmap mit dem Kollaborationstool Miro festgehalten. Daran anschließend wurden konkrete Szenarioideen gebildet, welche Gedanken zu Ablauf, Immersionsgeräten und der Administration des Alarmszenarios beinhalten. 
+
+Auf Grundlage der bisher erarbeiteten Ergebnisse wurde sich als Team auf ein Szenario geeinigt, welches als \textit{Minimal Viable Product} (\textit{MVP}) für die Projektarbeit zu realisieren ist. In einer weiteren Arbeitssitzung in Präsenz wurden nun ein Ablaufdiagramm des MVPs in der Prozessmodellierungssprache \textit{BPMN} entwickelt. Unter Abstimmung des aufgestellten Modells mit der Projektleitung von Seiten des Lehrstuhls wurden die technischen Rahmenbedingungen diskutiert. Durch diese Sitzung wurden schlussendlich die technische Implementierung realisiert, um das MVP-Szenario in der Simulationsumgebung des Zentrums Industrie 4.0 am Lehrstuhl für Wirtschaftsinformatik, Prozesse und Systeme der Universität Potsdam zu integrieren. Über den Projektzeitraum hinweg wurde kontinuierlich die hiermit vorliegende Projektdokumentation aktualisiert und weitere Dokumente, wie Beschreibungskarten und Sicherheitsdokumente zur Verwendung für die Alarmsimulation geschaffen.   
+
+
+
+\begin{comment}
 \section{Beschreibungskarte}
+
 
 \ 
 
-\textbf{AGENDA}
+\textbf{AGENDA} 
 
 \ 
 
@@ -86,98 +100,79 @@ Messung der Durchlaufzeit bei optimalen Abläufen
 
 \newpage
 
-\textbf{3.1 Einleitung und Szenario-Überblick}
+\subsection{Einleitung und Szenario-Überblick}
 
-In diesem Szenario wird ein komplexes System aus verschiedenen Komponenten und Prozessen beschrieben, dass in einen Maschinen-Simulationsraum implementiert wird. Die Szenariokomponenten bestehen aus Teilnehmer, Tablet, Subwoofer/Lautsprecher, Wärmelampe/Licht und Vaporizer. Diese Komponenten sind in einer Umgebung platziert, in der es Anlagen zum Bedienen gibt, die alle durch ein Förderband miteinander verbunden sind. Das System ist so konzipiert, dass es drei Eskalationsstufen gibt, die nacheinander aktiviert werden können. Jede Eskalationsstufe beinhaltet einen Entstörungsvorgang, der vom Teilnehmer gelöst werden muss. Dabei werden verschiedene Szenariokomponenten aktiviert, um den Prozess zu unterstützen und zu simulieren. Teilnehmer des Szenarios, die bei einem Enstörungsvorgang versagen, werden automatisch zur nächsten Eskalationsstufe befördert, bis sie maximal die Eskalationsstufe 3 erreichen. Während eines Enstörungsvorgangs steht den Teilnehmern dabei nur ein Versuch zur Verfügung. Allerdings haben erfolgreiche Szenarioteilnehmer die Möglichkeit, nach Abschluss einer beliebigen Eskalationsstufe das gesamte Szenario vorzeitig zu beenden. Pro Durchgang führt nur ein Szenarioteilnehmer das Szenario durch. Es gibt einen Betreuer, der diese Vorgänge beobachtet und bei Notfällen einschreitet, jedoch ist er nicht für die gesamten Handlungen im Szenarioprozess eingeplant.
+In diesem Szenario wird ein komplexes System aus verschiedenen Komponenten und Prozessen beschrieben, das in einen Maschinen-Simulationsraum implementiert wird. Die Szenariokomponenten bestehen aus den Teilnehmern, Tablet, Subwoofer/Lautsprecher, Wärmelampe/Licht und Nebelmaschine. Diese Komponenten sind in einer Umgebung platziert, in der es Anlagen zum Bedienen gibt, die alle durch ein Förderband miteinander verbunden sind. Das System ist so konzipiert, dass es drei Eskalationsstufen gibt, die nacheinander aktiviert werden können. Jede Eskalationsstufe beinhaltet einen Entstörungsvorgang, der vom Teilnehmer gelöst werden muss. Dabei werden verschiedene Szenariokomponenten aktiviert, um den Prozess zu unterstützen und zu simulieren. Teilnehmer des Szenarios, die bei einem Enstörungsvorgang versagen, werden automatisch zur nächsten Eskalationsstufe befördert, bis sie maximal die Eskalationsstufe 3 erreichen. Während eines Enstörungsvorgangs steht den Teilnehmern dabei nur ein Versuch zur Verfügung. Allerdings haben erfolgreiche Szenarioteilnehmer die Möglichkeit, nach Abschluss einer beliebigen Eskalationsstufe das gesamte Szenario vorzeitig zu beenden. Pro Durchgang führt nur ein Szenarioteilnehmer das Szenario durch. Es gibt einen Betreuer, der diese Vorgänge beobachtet und bei Notfällen einschreitet, jedoch ist er nicht für die gesamten Handlungen im Szenarioprozess eingeplant.
 
 \
 
 \underline{Einleitung zum Szenario:} \\
-Der Teilnehmer aktiviert die Anlage mit einem Startknopf auf dem Tablet. (Zeit: ca. 1 Sekunde)
-Es wird das Datenpaket für den Szenarioteilnehmer ausgelesen, woraufhin Anweisungen wie Gesundheitswarnungen oder weitere Verfahren angezeigt werden, die der Teilnehmer lesen soll: (Zeit: ca. 2 Minute)
-
+Der Teilnehmer aktiviert die Anlage mit einem Startknopf auf dem Tablet.\hspace{0pt}\marginpar{\footnotesize{ca. 1 Sek.}}
+Es wird das Datenpaket für den Szenarioteilnehmer ausgelesen, woraufhin Anweisungen wie Gesundheitswarnungen oder weitere Verfahren angezeigt werden, die der Teilnehmer lesen soll:
 \
 
-\textbf{3.2 Sicherheitsbriefing}
 
-\emph{Bitte nehmen Sie sich die Zeit, diese Anweisungen sorgfältig zu lesen und zu verstehen, bevor Sie mit dem Betrieb der Maschine fortfahren. Ihre Sicherheit hat oberste Priorität.}
-
-\newpage
-
-\emph{WICHTIG: GESUNDHEITSWARNUNG \\
-Bitte stellen Sie sicher, dass Sie die geeignete Schutzkleidung tragen, bevor Sie mit dem Betrieb dieser Maschine beginnen. Dies beinhaltet Schutzhandschuhe, Schutzbrille und Atemschutzmaske. Bitte entnehmen Sie die Schutzkleidung, die rechts von Ihnen lieg. 
-Es besteht die Möglichkeit, dass während des Szenarios Rauch oder andere intensiv riechende Substanzen verwendet werden.
-Dieses Szenario beinhaltet flackernde Lichter, die bei einigen Personen mit Epilepsie zu Anfällen führen können. 
-Bitte beachten Sie, dass Ihre Gesundheit und Sicherheit oberste Priorität haben. Falls Sie Bedenken haben oder gesundheitliche Einschränkungen haben, die sich auf Ihre Teilnahme an diesem Szenario auswirken könnten, empfehlen wir Ihnen, vorab Rücksprache mit einem Arzt zu halten, um sicherzustellen, dass Sie angemessen geschützt sind und das Szenario ohne Risiken für Ihre Gesundheit durchführen können.}
-
-\
-
-\textbf{3.3 Bedienungsanleitung und Aktivierung der Eskalationsstufe}
-\
-
-\emph{BEDIENUNGSANLEITUNG \\
-1.	Überprüfen Sie, ob alle Sicherheitsvorkehrungen getroffen wurden und die Maschine bereit für den Betrieb ist. \\
-2.	Drücken Sie den grünen Startknopf auf der rechten Seite des Bedienfelds, um den Maschinenprozess zu starten. \\
-3.	Überwachen Sie den Prozess auf dem Bildschirm. Achten Sie auf alle Warnungen oder Fehlermeldungen, die angezeigt werden könnten. \\
-4.	Im Falle einer Fehlermeldung, drücken Sie den roten Stopp-Knopf und befolgen Sie die Anweisungen auf dem Bildschirm. \\
-5.	Wenn der Prozess abgeschlossen ist, drücken Sie den blauen Reset-Knopf, um die Maschine auf ihren Ausgangszustand zurückzusetzen.}
-
-\
-
-\textbf{\underline{Start:}}
 
 \
 
 \underline{Einleitung der Eskalationsstufe 1:}
 
-Die Anlage fängt an zu laufen. (Zeit: ca. 8 Sekunden) 
-Gleichzeitig werden in der ersten Stufe die Szenariokomponenten aktiviert, wie der Subwoofer/Lautsprecher, der einen langsamen pulsierenden Ton erzeugt, sowie die Wärmelampe/Licht (Andon-Signalleuchte), die an der jeweiligen Maschine aktiviert wird und kontinuierlich leuchtet. (Zeit: ca. 1 Sekunde)
-Die Anlage ruckelt und stoppt ihren Arbeitsfluss. (Zeit: ca. 5 Sekunden)
+Die Anlage läuft an. \hspace{0pt}\marginpar{\footnotesize{ca. 8 Sek.}}
+Gleichzeitig werden in der ersten Stufe die Szenariokomponenten aktiviert, wie der Subwoofer/Lautsprecher, der einen langsamen pulsierenden Ton erzeugt,\hspace{0pt}\marginpar{\footnotesize{ca. 1 Sek.}} sowie die Wärmelampe/Licht (Andon-Signalleuchte), die an der jeweiligen Maschine aktiviert wird und kontinuierlich leuchtet.
+Die Anlage ruckelt und stoppt ihren Arbeitsfluss. \hspace{0pt}\marginpar{\footnotesize{ca. 5 Sek.}}
 
 \
 
-\textbf{3.4 Anzeige der Fehlermeldung und Lösungsansatz}
+\subsection{Anzeige der Fehlermeldung und Lösungsansatz}
 
-Auf dem Tablet erscheint ein Fehlercode mit dazugehörigen Maschinen- und Fehlerdetails, die der Szenarioteilnehmer liest: (Zeit: ca. 40 Sekunden)
-
-\
-
-\emph{FEHLERCODE: E101\\
-BETROFFENE MASCHINE: Maschine 3\\
-FEHLERDETAILS: Überhitzung}
+\hspace{0pt}\marginpar{\footnotesize{ca. 40 Sek.}} Auf dem Tablet erscheint der Name der betroffenen Maschine, zu der der Szenarioteilnehmer hinlaufen muss:
 
 \
 
-\emph{Die Sensoren in Maschine 3 haben eine übermäßige Wärmeentwicklung festgestellt, die über den sicheren Betriebsbereich hinausgeht. Dies kann zu Schäden an der Maschine und möglicherweise zu einem unsicheren Arbeitsumfeld führen.}
+\emph{FEHLERCODE: Machine01}\\
+\\
 
-\emph{Stoppen Sie Maschine 3 sofort, um weitere Schäden zu vermeiden, und lösen Sie das Rätsel während des Entstörungsvorgangs!}
+Hinlaufen zu dieser Maschine. \hspace{0pt}\marginpar{\footnotesize{ca. 15 Sek.}}
 
-Hinlaufen zu dieser Maschine. (Zeit: ca. 15 Sekunden)
 
-\
-
-\textbf{3.5 Eskalationsstufe 1}
-
-Auf dem Tablet erscheint ein QR-Code, der gescannt werden muss, um einen Entstörungsvorgang in 40 Sekunden bzw. das Problem zu lösen wie: (Zeit: ca. 45 Sekunden)
-
-\emph{(!) Lösen Sie das folgende Rätsel, um den Fehler zu beheben!}
 
 \
 
-\underline{\emph{Nummernspiel}} \\
-\emph{Auf dem Tablet wird eine Zahlenfolge angezeigt:} \\
+
+
+\\
+\hspace{0pt}\marginpar{\footnotesize{ca. 45 Sek.}}Auf dem Tablet erscheint ein QR-Code, der gescannt werden muss, um einen Entstörungsvorgang in 40 Sekunden bzw. das Problem zu lösen wie:\
 
 \
 
-\emph{(!) Lösen Sie das folgende Rätsel, um den Fehler zu beheben!} \\
+Ein großer Button in der Mitte mit der Aufschrift: "Mit Maschine interagieren". \
+Der Button verschwindet und macht Platz für den QR-Code-Leser, der wie ein rechteckiges Fenster in der Mitte des Bildschirms erscheint. Wenn der gescannte Code dem erwarteten Code entspricht: Eine Nachricht wird angezeigt, die besagt: "Dies ist der richtige Code! Starte Spiel...".
+Wenn der gescannte Code nicht dem erwarteten Code entspricht: Eine rote Fehlermeldung wird angezeigt, die besagt: "Falscher Code! Gehen Sie zu Machine03." Nach einer kurzen Verzögerung von 2 Sekunden wird der QR-Code-Leser erneut aktiviert, um einen weiteren Scan zu ermöglichen.
+\
 
-\emph{Auf dem Tablet wird eine zufällige Zahlenfolge angezeigt:} \\
+
+
+\\
+
+
+\subsection{Eskalationsstufe 1}
+
+
+\
+
+\underline{\emph{Numbers-basic}} \\
+\emph{Auf dem Tablet wird eine Notiz angezeigt:} \\
+
+\
+
+\emph{(!) Die Werkschritt-Reihenfolge der Maschine scheinen durcheinander gebracht zu sein. } \\
+
+\emph{Klicke auf die Nummern 1 bis 10 in aufsteigender Reihenfolge, um die richtige Reihenfolge wiederherzustellen. Für die Operation sind nur 10 Sekunden vorgesehen!} \\
+
 \emph{3, 5, 8, 10, 9, 2, 7, 4, 1, 6} \\
 
 \
-\emph{Ihre Aufgabe ist es, die Zahlen in aufsteigender Reihenfolge anzuklicken. Sie haben 10 Sekunden Zeit, um das Rätsel zu lösen.}
 
-\
 
 Es folgt eine Verzweigung, die eine Zufallsvariable beinhaltet:
 
@@ -185,32 +180,35 @@ Es folgt eine Verzweigung, die eine Zufallsvariable beinhaltet:
 
 \begin{itemize}
 \item
-Sollte der Entstörungsvorgang innerhalb der vorgegebenen Zeit nicht erfolgreich abgeschlossen werden oder eine falsche Eingabe getätigt werden, erfolgt der Übergang zur zweiten Eskalationsstufe automatisch. (Keine genaue Zeitangabe)
+Sollte der Entstörungsvorgang innerhalb der vorgegebenen Zeit nicht erfolgreich abgeschlossen werden oder eine falsche Eingabe getätigt werden, erfolgt der Übergang zur zweiten Eskalationsstufe automatisch.
 \item
-Ist der Entstörungsvorgang erfolgreich gelöst, folgt die Zufallsvariable, dabei wird bei einer 1/3 Wahrscheinlichkeit das Problem als nicht gelöst erfasst. Dann erfolgt ebenfalls der Übergang zur zweiten Eskalationsstufe automatisch. (Keine genaue Zeitangabe)
+Ist der Entstörungsvorgang erfolgreich gelöst, folgt die Zufallsvariable, dabei wird bei einer 1/3 Wahrscheinlichkeit das Problem als nicht gelöst erfasst. Dann erfolgt ebenfalls der Übergang zur zweiten Eskalationsstufe automatisch.
 \item
-Wenn der Entstörungsvorgang erfolgreich gelöst ist, folgt die Zufallsvariable, bei der mit einer Wahrscheinlichkeit von 2/3 das Problem als gelöst erfasst wird. Wenn dieses Szenario eintrifft, werden alle Szenariokomponenten ausgeschaltet und das Szenario für den Teilnehmer ist erfolgreich beendet.  (Zeit: ca. 3 Sekunden)
+\hspace{0pt}\marginpar{\footnotesize{ca. 3 Sek.}}Wenn der Entstörungsvorgang erfolgreich gelöst ist, folgt die Zufallsvariable, bei der mit einer Wahrscheinlichkeit von 2/3 das Problem als gelöst erfasst wird. Wenn dieses Szenario eintrifft, werden alle Szenariokomponenten ausgeschaltet und das Szenario für den Teilnehmer ist erfolgreich beendet.
 \end{itemize}
 
 
 \newpage 
 
-\textbf{3.6 Eskalationsstufe 2}
+\subsection{Eskalationsstufe 2}
 
-Simultan werden die Szenariokompontenten Subwoofer/Lautprecher mit einem mittelschnell schlagenden Ton aktiviert. Der Vaporizer stößt derweil Brandgeruch aus. Die LED-Leuchte flackert bei der Maschine blau. Diese bleiben durchgehend in der zweiten Eskalationsstufe aktiv. (Zeit: ca. 5 Sekunde) \\
+Simultan werden die Szenariokompontenten Subwoofer/Lautprecher mit einem mittelschnell schlagenden Ton aktiviert. Der Vaporizer stößt derweil Brandgeruch aus. Die LED-Leuchte flackert bei der Maschine blau. Diese bleiben durchgehend in der zweiten Eskalationsstufe aktiv.\hspace{0pt}\marginpar{\footnotesize{ca. 5 Sek.}} \\
 Der Szenarioteilnehmer soll sich selbstständig zur nächsten Maschine bewegen, was durch eine Andon-Signalleuchte an der Maschine signalisiert wird. (Zeit: ca. 15 Sekunden) \\
-Erneut muss ein Entstörungsvorgang durchgeführt werden: (Zeit: ca. 40 Sekunden) 
+\hspace{0pt}\marginpar{\footnotesize{ca. 40 Sek.}}Erneut muss ein Entstörungsvorgang durchgeführt werden: 
 
 \
 
-\underline{\emph{Kalibrierung}} \\
-\emph{(!) Lösen Sie das folgende Rätsel, um den Fehler zu beheben!}\\
+\underline{\emph{Reaction}} \\
+\emph{(!) Auf dem Tablet wird eine Notiz angezeigt:}\\
 
-Es gibt ein Problem mit der Kalibrierung der Maschine, was zu schwerwiegenden Fehlfunktionen führt. Es ist entscheidend, dass die Eingaben der Maschine korrekt kalibriert sind, um Fehlerquellen zu eliminieren. Um eine korrekte Kalibrierung zu gewährleisten, klicken Sie so schnell wie möglich auf den Bildschirm, sobald er grün wird. \\
+Problem mit der Kalibrierung! Etwas scheint mit der Kalibrierung der Maschine ein Problem zu geben, das schwerwiegende Fehler auslöst. Um alle möglichen Fehlerquellen auszuschließen, müssen die Eingaben neu kalibriert werden. \\
           
-Der Bildschirm startet im schwarzen Zustand. Wenn Sie länger als 0,6 Sekunden brauchen, um eines der beiden grünen Kacheln anzuklicken, kann die Maschine nicht kalibriert werden. Es sind 6 Kalibrierungseingaben erforderlich, um die Maschine erfolgreich zu kalibrieren.
+Zur korrekten Kalibrierung muss der richtige grün aufleuchtende Bereich innerhalb von 0,6 Sekunden gedrückt werden. Die Bereiche fangen in einem schwarzen Zustand an. Falls du länger als 0,6 Sekunden brauchst, um den grün aufleuchtenden Bereich zu drücken, kann die Maschine nicht kalibriert werden. Es benötigt 6 erfolgreiche Kalibrierungen.
 
-$\Box\hspace{85pt}\\\Box$
+\
+\includegraphics[width=1.6cm, height=1.3cm]{res/2cube.jpg} \\
+\includegraphics[width=3cm, height=2cm,]{res/cube.jpg} 
+
 
 \
 
@@ -218,30 +216,27 @@ Danach erfolgt eine weitere Verzweigung, bei der die Zufallsvariable aktiviert w
 
 \
 
-\textbf{3.7 Eskalationsstufe 3} \\
+\subsection{Eskalationsstufe 3} \\
 
-Gleichzeitig werden die Szenariokomponenten Subwoofer/Lautsprecher mit einem schnell schlagenden Ton, der Vaporizer mit einem intensiveren Geruch als zuvor und die Wärmelampe aktiviert. Die Andon-leuchte flackert rot. Diese bleiben durchgehend in der dritten Eskalationsstufe aktiv. (Zeit: ca. 5 Sekunde) \\
-Der Szenarioteilnehmer soll zur nächsten Maschine, welches durch eine Andon-Signalleuchte signalisiert wird, hinbewegen. (Zeit: ca. 15 Sekunden) \\
-Erneut muss ein Entstörungsvorgang durchgeführt werden: (Zeit: ca. 40 Sekunden) 
-
-\
-
-\underline{\emph{Algorithmus}} \\
-\emph{Auf dem Tablet wird eine Zahlenfolge angezeigt:} \\
+Gleichzeitig werden die Szenariokomponenten Subwoofer/Lautsprecher mit einem schnell schlagenden Ton, der Vaporizer mit einem intensiveren Geruch als zuvor und die Wärmelampe aktiviert. Die Andon-leuchte flackert rot. Diese bleiben durchgehend in der dritten Eskalationsstufe aktiv.\hspace{0pt}\marginpar{\footnotesize{ca. 5 Sek.}} \\
+Der Szenarioteilnehmer soll zur nächsten Maschine, welches durch eine Andon-Signalleuchte signalisiert wird, hinbewegen.\hspace{0pt}\marginpar{\footnotesize{ca. 15 Sek.}} \\
+Erneut muss ein Entstörungsvorgang durchgeführt werden: \hspace{0pt}\marginpar{\footnotesize{ca. 40 Sek.}}
 
 \
 
-\emph{(!) Lösen Sie das folgende Rätsel, um den Fehler zu beheben!} \\
-
-\
-\emph{Der Algorithmus der Maschine scheint ein Problem zu haben. \\
-Um die Maschine zu reparieren, müssen Sie die Zahlen 1 bis 10 in aufsteigender Reihenfolge anklicken.
-Nach 5 und 10 Sekunden werden die Zahlen durcheinandergebracht. \\
-Sobald Sie beginnen, haben Sie 15 Sekunden Zeit.}
+\underline{\emph{Numbers-advanced}} \\
+\emph{Auf dem Tablet wird eine Notiz angezeigt:} \\
 
 \
 
-\emph{Die Zahlen werden auf dem Bildschirm in einer zufälligen Reihenfolge verstreut angezeigt:} \\
+\emph{(!) Die Werkschritt-Reihenfolge der Maschine scheinen durcheinander gebracht zu sein. } \\
+
+\emph{Der Algorithmus der Maschine scheint ein Problem zu haben. Mehrere Prozesse scheinen separat zu laufen, die wieder in die richtige Reihenfolge gebracht werden müssen.
+        Klicke die Nummern 1 bis 10 in aufsteigender Reihenfolge an, um dies zu tun.
+        Nach jeweils 5 und 10 Sekunden werden die Zahlen gemischt.
+        Für diese Reparatur sind lediglich 15 Sekunden vorgesehen!} \\
+
+
 \emph{3\hspace{15pt} 5\hspace{42pt} 8\hspace{58pt} 10\hspace{75pt} \\9\hspace{25pt} 2\hspace{37pt} 7\hspace{83pt} \\4\hspace{39pt} 1\hspace{66pt} 6\hspace{81pt}} \\
 
 \
@@ -249,8 +244,8 @@ Danach erfolgt eine weitere Verzweigung, bei der die Zufallsvariable aktiviert w
 
 \
 
-\textbf{3.8 Voraussichtliche Zeitangaben des Szenarios}\\
-Bitte beachten Sie, dass dies geschätzte Zeiten sind und je nach individueller Durchführung und Reaktionsgeschwindigkeit des Teilnehmers leicht variieren können. Diese Zeitangaben stehen daher unter Vorbehalt und dienen lediglich als grobe Orientierung. Es ist möglich, dass die tatsächliche Dauer für jeden Teilnehmer unterschiedlich ist.
+\subsection{Voraussichtliche Zeitangaben des Szenarios}
+Sämtliche Zeitangangaben beruhen auf einer Schätzung bzw. theoretischen Planung und sind je nach individueller Durchführung und Reaktionsgeschwindigkeit des Teilnehmers variabel. Diese Zeitangaben stehen daher unter Vorbehalt und dienen lediglich als grobe Orientierung. Es ist möglich, dass die tatsächliche Dauer für jeden Teilnehmer unterschiedlich ist. \\
 
 \
 
@@ -260,28 +255,28 @@ Aktivierung der Anlage: ca. 8 Sekunden \\
 Unterbrechung der Anlage ca. 5 Sekunden \\
 Anzeige der Fehlermeldung: ca. 40 Sekunden \\
 Hinlaufen zur Maschine: ca. 15 Sekunden \\
-Entstörungsvorgang in der ersten Stufe: ca. 10 Sekunden \\
+Entstörungsvorgang in der ersten Stufe: ca. 45 Sekunden \\
 Einschreiten der Zufallsvariable: ca. 3 Sekunden \\
-Geschätzte Gesamtzeit für den Abschluss der ersten Stufe: ca. 3 1/2 Minuten \\
+Geschätzte Gesamtzeit für den Abschluss der ersten Stufe: ca. 4 Minuten \\
 
 \
 
 \underline{Benötigte Zeit für Eskalationsstufe 2} \\
-Zeit für die erste Stufe: ca. 3 1/2 Minuten \\
+Zeit für die erste Stufe: ca. 4 Minuten \\
 Hinlaufen zur Maschine: ca. 15 Sekunden \\
 Entstörungsvorgang in der zweiten Stufe: ca. 40 Sekunden \\
 Einschreiten der Zufallsvariable: ca. 3 Sekunden \\
-Geschätzte Gesamtzeit für den Abschluss der ersten und der zweiten Stufe: ca. 4 1/2 Minuten \\
+Geschätzte Gesamtzeit für den Abschluss der ersten und der zweiten Stufe: ca. 5 Minuten \\
 
 \
 
 \underline{Benötigte Zeit für Eskalationsstufe 3 / Max. Zeit bei Erfolglosigkeit} \\
-Zeit für die zweite Stufe: ca. 4 1/2 Minuten \\
+Zeit für die zweite Stufe: ca. 5 Minuten \\
 Hinlaufen zur Maschine: ca. 15 Sekunden \\
-Entstörungsvorgang in der dritten Stufe: ca. 15 Sekunden \\
+Entstörungsvorgang in der dritten Stufe: ca. 40 Sekunden \\
 Einschreiten der Zufallsvariable: ca. 3 Sekunden \\
-Geschätzte Gesamtzeit für den Abschluss der ersten, zweiten und der dritten Stufe: ca. 5 Minuten \\
-
+Geschätzte Gesamtzeit für den Abschluss der ersten, zweiten und der dritten Stufe: ca. 6 Minuten \\
+\end{comment}
 
 
 
